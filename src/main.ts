@@ -4,13 +4,9 @@ import { Card } from './components/card/card';
 import { Accordion } from './components/accordion/accordion';
 import { createPaymentModal, createSuccessModal } from './components/modal/modal';
 import { Input } from './components/input/input';
-import heroImg from './assets/hero.png';
-import herox from './assets/herox.png';
-import heroxx from './assets/heroxx.png';
-import hero1 from './assets/hero1.png';
-import hero2 from './assets/hero2.png';
-import hero3 from './assets/hero3.png';
-import hero4 from './assets/hero4.png';
+import heroImg from './assets/hero.webp';
+import hero1 from './assets/hero1.webp';
+import hero2 from './assets/hero2.webp';
 
 const app = document.querySelector('#app') as HTMLElement;
 
@@ -26,7 +22,7 @@ app.innerHTML = `
   <!-- hero -->
   <section id="hero">
       <div class="hero__image">
-        <img id="heroImg" src="${heroImg}" alt="product" />
+        <img id="heroImg" src="${heroImg}" alt="product" width="800" height="600"/>
       </div>
 
       <div class="hero__text">
@@ -43,7 +39,7 @@ app.innerHTML = `
       <div class="product__left">
         <div class="gallery">
           <button id="prevImg" class="gallery-btn">←</button>
-          <img id="productImage" src="${hero1}" alt="product" />
+          <img id="productImage" src="${hero1}" alt="product" loading="lazy" width="800" height="600"/>
           <button id="nextImg" class="gallery-btn">→</button>
         </div>
         ${Button("Satın Al","buy")}
@@ -96,18 +92,12 @@ const successModal = createSuccessModal();
 document.body.appendChild(successModal);
 
 /*ürün resim galerisi*/
-const productImages = [hero1, hero2, hero3, hero4];
+const productImages = [hero1, hero2];
 let currentImage = 0;
 
 const imgEl = document.getElementById('productImage') as HTMLImageElement;
 const prevBtn = document.getElementById('prevImg');
 const nextBtn = document.getElementById('nextImg');
-
-/*hero resimler*/
-const heroImages = [heroImg, herox, heroxx];
-let currentHero = 0;
-
-const heroImgEl = document.getElementById('heroImg') as HTMLImageElement;
 
 /*state*/
 const buyButton = document.querySelector('[data-id="buy"]') as HTMLButtonElement;
@@ -278,17 +268,6 @@ function showToast(message: string, type: 'success' | 'error' | 'info' = 'info')
     setTimeout(() => toast.remove(), 300);
   }, 2500);
 }
-
-/*hero slide*/
-setInterval(() => {
-  heroImgEl.style.opacity = "0";
-
-  setTimeout(() => {
-    currentHero = (currentHero + 1) % heroImages.length;
-    heroImgEl.src = heroImages[currentHero];
-    heroImgEl.style.opacity = "1";
-  }, 800);
-}, 10000);
 
 /*ürün slide*/
 function updateImage() {

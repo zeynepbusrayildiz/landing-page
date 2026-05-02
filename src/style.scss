@@ -137,11 +137,9 @@ h1, h2, h3 {
   align-items: start;
 }
 
-#heroImg {
-  transition: opacity 0.8s ease;
-}
-
 .hero__image img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 10px -4px var(--herobox-shdw);
 }
