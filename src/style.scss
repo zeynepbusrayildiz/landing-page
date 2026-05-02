@@ -152,13 +152,53 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
+  /* HERO */
   #hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
   }
 
   .hero__image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero__text {
+    font-size: 20px;
+    margin-top: 12px;
+    padding: 10px;
+  }
+
+  /* PRODUCT */
+  #product {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product__left img {
+    max-width: 100%;
+  }
+
+  /* CARDS */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* BOTTOM */
+  #bottom {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .bottom__left,
+  .bottom__right {
+    justify-self: stretch;
+  }
+
+  /* GALLERY */
+  .gallery img {
     max-width: 100%;
   }
 }
