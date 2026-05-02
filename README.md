@@ -1,3 +1,4 @@
+
 # Ürün Tanıtım Landing Page
 
 ## Proje Açıklaması
@@ -50,6 +51,12 @@ Toast bildirimleri
 
 ##Canlı Demo:
 https://landingpagetencere.netlify.app/
+
+---
+
+##Lighthouse Score:
+<img width="1918" height="909" alt="Screenshot 2026-05-02 230756" src="https://github.com/user-attachments/assets/e32ae2c8-82ce-49de-8df3-0d36dd3ee59e" />
+<img width="1919" height="902" alt="Screenshot 2026-05-02 230735" src="https://github.com/user-attachments/assets/8f01ee5e-19a5-45fa-919d-2a0f3739d79b" />
 
 ---
 
