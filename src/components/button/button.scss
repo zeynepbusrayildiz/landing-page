@@ -1,0 +1,18 @@
+.btn {
+  background: var(--button);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+}
+
+.btn:active {
+  background: var(--button-active);
+  transform: scale(0.97);
+}

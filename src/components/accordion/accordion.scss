@@ -1,0 +1,35 @@
+.accordion {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.accordion__header {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: var(--card);
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.accordion__icon {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.accordion__content {
+  background: var(--header);
+  display: none;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.accordion__header:hover {
+  opacity: 0.75;
+}

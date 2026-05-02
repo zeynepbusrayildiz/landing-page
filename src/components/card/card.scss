@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 10px;
+}
+
+.card__title {
+  margin-bottom: 10px;
+}
+
+.card__text {
+  font-size: 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.card--payment {
+  border: 2px dashed var(--primary);
+  background: rgba(255, 182, 193, 0.2);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card--payment:hover {
+  transform: scale(1.03);
+}
+
+@keyframes highlight {
+  0% { box-shadow: 0 0 0 0 red; }
+  50% { box-shadow: 0 0 10px 5px red; }
+  100% { box-shadow: 0 0 0 0 red; }
+}
+
+.card--attention {
+  animation: highlight 0.8s ease 2;
+}
