@@ -48,7 +48,12 @@ Toast bildirimleri
 
 ---
 
-## Kurulum:
+##Canlı Demo:
+https://landingpagetencere.netlify.app/
+
+---
+
+##Kurulum:
 
 Projeyi çalıştırmak için:
 npm install
